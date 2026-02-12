@@ -1,0 +1,24 @@
+// Певкин Юрий ЭФБО-09-25
+#include <iostream>
+using namespace std;
+
+int main() {
+    int n;
+    cin >> n; // ввод числа n
+    
+    cout << "На лугу пасется " << n << " ";
+    
+    int last = n%10; // последняя цифра
+    int last2 = n%100; // две последние цифры
+    
+    if (last2 >= 11 && last2 <= 14) {
+        cout << "коров";
+    } else if (last == 1) {
+        cout << "корова";
+    } else if (last == 2 || last == 3 || last == 4) {
+        cout << "коровы";
+    } else {
+        cout << "коров";
+    }
+    return 0;
+}
