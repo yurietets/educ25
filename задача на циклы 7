@@ -1,0 +1,21 @@
+// Певкин Юрий ЭФБО-09-25
+#include <iostream>
+using namespace std;
+
+int main() {
+    int n;
+    cin >> n;
+    
+    int number = 1; // текущее число
+    int count = 0; // считаем сколько раз вывели число
+    
+    while (number < n) {
+        cout << number << " ";
+        count++;
+        if (count == number) {
+            count = 0;
+            number++;
+        }
+    }
+    return 0;
+}
