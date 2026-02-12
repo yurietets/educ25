@@ -1,0 +1,22 @@
+// Певкин Юрий ЭФБО-09-25
+#include <iostream>
+using namespace std;
+
+int main() {
+	int h, a, b;
+	cin >> h >> a >> b; // высота, подъем за день, спуск за ночь
+	
+	int day = 1;
+	int path = 1; // общий путь
+	
+	while (true) { 
+	    path += a;
+	    if (path >= h) { // проверяем, достигла ли вершины
+	        cout << day;
+	        break;
+        }
+        path -= b; // спуск за ночь
+        day++;
+	}
+	return 0;
+}
